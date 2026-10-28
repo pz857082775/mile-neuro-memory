@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 记忆数据（本地运行时产生，绝不入库）
+.neuromem/
+neuromem-data/
+/users/
+
+# 本地临时产物
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
