@@ -1,0 +1,190 @@
+{
+ "meta": {
+  "engine": "v2.0",
+  "root": "C:\\Users\\admin\\AppData\\Local\\Temp\\nmem-v2-accept-4pg2qeyt"
+ },
+ "rqs": {
+  "RQ-01_向量语义检索": {
+   "cases": [
+    {
+     "name": "同义改写语义命中",
+     "pass": true,
+     "detail": "top1=张三喜欢喝美式咖啡，常去公司楼下瑞幸"
+    },
+    {
+     "name": "语义近似命中",
+     "pass": true,
+     "detail": "top1=李四负责前端团队，偏好深色主题"
+    }
+   ],
+   "pass": 2,
+   "total": 2
+  },
+  "RQ-02_BM25关键词": {
+   "cases": [
+    {
+     "name": "关键词精确命中",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 1,
+   "total": 1
+  },
+  "RQ-03_自动捕获": {
+   "cases": [
+    {
+     "name": "3事实对话捕获≥2",
+     "pass": true,
+     "detail": "captured=3 facts=['项目 Alpha 预算调整为 80 万元', '王五负责前端团队', '用户偏好深色主题界面']"
+    },
+    {
+     "name": "捕获内容可检索",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 2,
+   "total": 2
+  },
+  "RQ-04_MCP协议": {
+   "cases": [
+    {
+     "name": "initialize 握手",
+     "pass": true,
+     "detail": "{'name': 'mile-neuro-memory', 'version': '2.0.0'}"
+    },
+    {
+     "name": "MCP add 成功",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "MCP search 命中",
+     "pass": true,
+     "detail": "{\"ok\": true, \"results\": [{\"id\": \"m_1793183466463_9ce039be\", \"text\": \"MCP测试：赵六喜欢骑"
+    }
+   ],
+   "pass": 3,
+   "total": 3
+  },
+  "RQ-05_实体关系图谱": {
+   "cases": [
+    {
+     "name": "图谱有节点",
+     "pass": true,
+     "detail": "nodes=13 edges=6"
+    },
+    {
+     "name": "实体查询返回",
+     "pass": true,
+     "detail": "[{'edge': '张三|喜欢|喝美式咖啡', 'strength': 0.2, 'memories': 1}]"
+    }
+   ],
+   "pass": 2,
+   "total": 2
+  },
+  "RQ-06_反馈闭环": {
+   "cases": [
+    {
+     "name": "correct 沉淀纠偏规则",
+     "pass": true,
+     "detail": "{\"rule_added\": true, \"demoted_peers\": 1}"
+    },
+    {
+     "name": "纠偏后检索到新表述",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "纠正后旧说法不再排前",
+     "pass": true,
+     "detail": "新表述位次=0, 旧说法位次=1"
+    }
+   ],
+   "pass": 3,
+   "total": 3
+  },
+  "RQ-07_自主进化": {
+   "cases": [
+    {
+     "name": "进化沉淀规则",
+     "pass": true,
+     "detail": "[{\"rule\": \"纠偏规则（自动沉淀）：关于「孙八」的信息，历史纠正 2 次，正确表述以最近一次为\", \"count\": 2, \"mem_id\": \"m_1793183471883_50080634\"}]"
+    }
+   ],
+   "pass": 1,
+   "total": 1
+  },
+  "RQ-08_可视化面板": {
+   "cases": [
+    {
+     "name": "ui/stats 数据完整",
+     "pass": true,
+     "detail": "total=12"
+    },
+    {
+     "name": "UI 页面可访问",
+     "pass": true,
+     "detail": "3856 bytes"
+    }
+   ],
+   "pass": 2,
+   "total": 2
+  },
+  "RQ-09_后台巩固": {
+   "cases": [
+    {
+     "name": "daemon 模式启动",
+     "pass": true,
+     "detail": "{\"ok\": true, \"daemon\": true, \"interval_min\": 5, \"note\": \"守护模式启动，Ctrl+C 退出\"}\n"
+    }
+   ],
+   "pass": 1,
+   "total": 1
+  },
+  "RQ-10_AEAD加密": {
+   "cases": [
+    {
+     "name": "v2 密文落盘",
+     "pass": true,
+     "detail": "enc:v2 present"
+    },
+    {
+     "name": "解密读取",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "篡改可检出",
+     "pass": true,
+     "detail": "Incorrect padding"
+    }
+   ],
+   "pass": 3,
+   "total": 3
+  },
+  "RQ-11_基准跑分": {
+   "cases": [
+    {
+     "name": "跑分产出指标",
+     "pass": true,
+     "detail": "accuracy=100.0% recall=100.0%"
+    },
+    {
+     "name": "准确率可接受",
+     "pass": true,
+     "detail": "100.0%"
+    }
+   ],
+   "pass": 2,
+   "total": 2
+  }
+ },
+ "summary": {
+  "rq_count": 11,
+  "total_cases": 22,
+  "passed": 22,
+  "pass_rate": 100.0
+ }
+}

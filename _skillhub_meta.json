@@ -1,0 +1,21 @@
+{
+  "name": "米乐-神经网络记忆",
+  "name_en": "Mile Neuro Memory",
+  "slug": "mile-neuro-memory",
+  "version": "2.0.0",
+  "author": "米乐",
+  "category": "记忆与知识管理",
+  "description_zh": "模拟人脑「工作记忆→短时→长时永久」三层编码与遗忘曲线，提供向量语义+BM25 混合检索、对话事实自动捕获、矛盾自动检测与版本化修正、反馈闭环自我进化、实体关系图谱、三级语义缓存降本、增量跨端同步、AEAD 认证加密与全链路审计。零第三方依赖，纯 Python 标准库实现，离线可跑，25 个子命令，内置 MCP 服务器与可视化面板。",
+  "description_en": "Brain-inspired memory system with working/short-term/long-term tiers, hybrid vector-semantic + BM25 retrieval, automatic conversation fact capture, contradiction detection with versioned correction, feedback-loop self-evolution, entity-relation graph, three-tier semantic cache for token savings, incremental sync, authenticated AEAD encryption and full audit trail. Zero third-party dependencies, pure Python stdlib, works fully offline, 25 subcommands, built-in MCP server and web dashboard.",
+  "license": "MIT",
+  "compatibility": ["workbuddy", "claude-code", "openclaw"],
+  "tags": ["记忆", "memory", "类脑", "向量检索", "BM25", "MCP", "语义缓存", "知识图谱", "自我进化", "加密", "审计"],
+  "highlights": [
+    "零第三方依赖：纯 Python 标准库，离线沙箱可直接跑",
+    "三路混合召回：字面 bigram + 512 维哈希向量 + BM25",
+    "MCP 即插即用：任意 AI 客户端注册 mcp 子命令即可调用",
+    "自我进化：纠偏一次自动沉淀规则，同类错误不再犯",
+    "认证加密：enc:v2 encrypt-then-MAC，密文篡改可检出",
+    "内置跑分：19 组同义改写/矛盾修正评测集，准确率可复现"
+  ]
+}

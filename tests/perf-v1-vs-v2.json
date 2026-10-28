@@ -1,0 +1,30 @@
+{
+  "memory_count": 200,
+  "queries": 10,
+  "rounds": 3,
+  "v1.1.0": {
+    "seed_seconds": 137.5,
+    "add_ms_per_mem": 687.7,
+    "search": {
+      "avg_ms": 674.9,
+      "p50_ms": 651.3,
+      "p95_ms": 822.1,
+      "samples": 30
+    }
+  },
+  "v2.0.0": {
+    "seed_seconds": 136.0,
+    "add_ms_per_mem": 680.0,
+    "search": {
+      "avg_ms": 573.3,
+      "p50_ms": 572.7,
+      "p95_ms": 675.5,
+      "samples": 30
+    }
+  },
+  "delta": {
+    "avg_ms": -101.6,
+    "avg_pct": -15.1,
+    "add_ms_per_mem_pct": -1.1
+  }
+}

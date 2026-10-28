@@ -1,0 +1,566 @@
+{
+ "meta": {
+  "generated": "2026-10-28T10:32:28.170744+00:00",
+  "ours_version": "2.0.0",
+  "ours_total": 91,
+  "ours_v1_total": 71,
+  "dims": [
+   {
+    "code": "A",
+    "label": "分层记忆"
+   },
+   {
+    "code": "B",
+    "label": "向量语义检索"
+   },
+   {
+    "code": "C",
+    "label": "关键词/倒排检索"
+   },
+   {
+    "code": "D",
+    "label": "知识图谱/关系"
+   },
+   {
+    "code": "E",
+    "label": "矛盾检测修正"
+   },
+   {
+    "code": "F",
+    "label": "版本管理/回滚"
+   },
+   {
+    "code": "G",
+    "label": "遗忘机制"
+   },
+   {
+    "code": "H",
+    "label": "语义缓存/降本"
+   },
+   {
+    "code": "I",
+    "label": "跨端同步"
+   },
+   {
+    "code": "J",
+    "label": "多租户隔离"
+   },
+   {
+    "code": "K",
+    "label": "端侧加密"
+   },
+   {
+    "code": "L",
+    "label": "审计留痕"
+   },
+   {
+    "code": "M",
+    "label": "自动捕获Hook"
+   },
+   {
+    "code": "N",
+    "label": "离线巩固"
+   },
+   {
+    "code": "O",
+    "label": "可视化面板"
+   },
+   {
+    "code": "P",
+    "label": "接入方式"
+   },
+   {
+    "code": "Q",
+    "label": "零依赖离线"
+   },
+   {
+    "code": "R",
+    "label": "自主进化"
+   },
+   {
+    "code": "S",
+    "label": "反馈闭环"
+   },
+   {
+    "code": "T",
+    "label": "公开基准"
+   }
+  ],
+  "test": {
+   "baseline": "63/63",
+   "v2_rq": "22/22",
+   "total": "85/85"
+  },
+  "benchmark": {
+   "queries": 19,
+   "accuracy": 100.0,
+   "avg_query_ms": 33.48
+  },
+  "perf": {
+   "v1_avg_ms": 674.9,
+   "v2_avg_ms": 573.3,
+   "delta_pct": -15.1
+  }
+ },
+ "skills": {
+  "🧠 mile-neuro-memory (我们 v2.0.0)": {
+   "scores": {
+    "A": 5,
+    "B": 4,
+    "C": 5,
+    "D": 4,
+    "E": 5,
+    "F": 5,
+    "G": 5,
+    "H": 5,
+    "I": 5,
+    "J": 5,
+    "K": 4,
+    "L": 5,
+    "M": 4,
+    "N": 5,
+    "O": 4,
+    "P": 5,
+    "Q": 5,
+    "R": 4,
+    "S": 4,
+    "T": 3
+   },
+   "total": 91,
+   "advantage": "v2.0 补齐全部短板：三路混合召回（bigram+512维哈希向量+BM25）、capture 自动捕获、MCP stdio 服务、实体关系图谱、纠偏规则参与排序的反馈闭环、evolve 自我进化、/ui 可视化面板、daemon 后台巩固、enc:v2 认证加密、19 组基准跑分；零依赖底线不变，85 项自动化用例 100% 通过，检索比 v1.1 快 15%",
+   "tag": "本地优先类脑记忆引擎(v2.0，标准库实现)"
+  },
+  "🗂️ mile-brain-memory (本机旧版 v1.0.0)": {
+   "scores": {
+    "A": 5,
+    "B": 2,
+    "C": 4,
+    "D": 3,
+    "E": 4,
+    "F": 5,
+    "G": 5,
+    "H": 5,
+    "I": 5,
+    "J": 5,
+    "K": 2,
+    "L": 5,
+    "M": 0,
+    "N": 4,
+    "O": 0,
+    "P": 4,
+    "Q": 5,
+    "R": 0,
+    "S": 1,
+    "T": 0
+   },
+   "total": 64,
+   "advantage": "与 neuro-memory 同源但旧版：无 batch/无时间线矛盾/无加密开关修复，18 命令",
+   "tag": "neuro-memory 的早期分支(已过时)"
+  },
+  "🐧 hy-memory (本机·腾讯SDK)": {
+   "scores": {
+    "A": 4,
+    "B": 5,
+    "C": 3,
+    "D": 2,
+    "E": 2,
+    "F": 0,
+    "G": 0,
+    "H": 0,
+    "I": 0,
+    "J": 4,
+    "K": 0,
+    "L": 0,
+    "M": 0,
+    "N": 0,
+    "O": 0,
+    "P": 3,
+    "Q": 1,
+    "R": 0,
+    "S": 0,
+    "T": 2
+   },
+   "total": 26,
+   "advantage": "腾讯混元官方 SDK 封装：真向量检索+Chat/Working/Coding 场景分层+ultra 模式 System2 认知加工",
+   "tag": "封装 hy_memory Python SDK(需装依赖+LLM+Embedding)"
+  },
+  "⚙️ memory-manager-v2 (本机·记忆管家)": {
+   "scores": {
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 0,
+    "E": 0,
+    "F": 5,
+    "G": 0,
+    "H": 4,
+    "I": 0,
+    "J": 0,
+    "K": 0,
+    "L": 3,
+    "M": 0,
+    "N": 0,
+    "O": 3,
+    "P": 2,
+    "Q": 4,
+    "R": 0,
+    "S": 0,
+    "T": 0
+   },
+   "total": 27,
+   "advantage": "Token 节流阀：govern/snapshot/compact/dashboard/health 五维治理+预算压减+tiktoken 计量+33 条别名",
+   "tag": "记忆文件治理与 Token 成本管控工具"
+  },
+  "🌱 memory-evolution (本机·进化引擎)": {
+   "scores": {
+    "A": 3,
+    "B": 0,
+    "C": 2,
+    "D": 0,
+    "E": 0,
+    "F": 0,
+    "G": 4,
+    "H": 0,
+    "I": 0,
+    "J": 0,
+    "K": 0,
+    "L": 0,
+    "M": 1,
+    "N": 3,
+    "O": 0,
+    "P": 0,
+    "Q": 2,
+    "R": 4,
+    "S": 3,
+    "T": 0
+   },
+   "total": 22,
+   "advantage": "自学习记忆：HOT/WARM/COLD+衰减遗忘模型+三触发反思+进化引擎(sensor/world_model/evo_devo)",
+   "tag": "基于 Markdown 的 AI 驱动自进化(无引擎脚本)"
+  },
+  "📋 memory-management (本机·项目治理)": {
+   "scores": {
+    "A": 3,
+    "B": 0,
+    "C": 1,
+    "D": 0,
+    "E": 2,
+    "F": 0,
+    "G": 1,
+    "H": 0,
+    "I": 0,
+    "J": 0,
+    "K": 0,
+    "L": 3,
+    "M": 0,
+    "N": 2,
+    "O": 0,
+    "P": 0,
+    "Q": 2,
+    "R": 0,
+    "S": 2,
+    "T": 0
+   },
+   "total": 16,
+   "advantage": "项目记忆治理协议：HOT/WARM/COLD+注册表事件溯源+权限决策门+GDPR 清洗",
+   "tag": "agent 项目记忆治理框架(协议驱动)"
+  },
+  "🚀 Mem0 (55k⭐)": {
+   "scores": {
+    "A": 4,
+    "B": 5,
+    "C": 4,
+    "D": 4,
+    "E": 3,
+    "F": 1,
+    "G": 2,
+    "H": 2,
+    "I": 3,
+    "J": 4,
+    "K": 1,
+    "L": 2,
+    "M": 2,
+    "N": 0,
+    "O": 3,
+    "P": 5,
+    "Q": 2,
+    "R": 1,
+    "S": 2,
+    "T": 5
+   },
+   "total": 55,
+   "advantage": "生态最大+文档最全：多后端，单遍 ADD 提取+实体链接+多信号检索(语义/BM25/实体)+时间推理，LoCoMo 92.5/LongMemEval 94.4",
+   "tag": "通用记忆层(库/自托管/云三态)"
+  },
+  "⚡ agentmemory (29k⭐)": {
+   "scores": {
+    "A": 4,
+    "B": 5,
+    "C": 5,
+    "D": 5,
+    "E": 2,
+    "F": 2,
+    "G": 3,
+    "H": 3,
+    "I": 3,
+    "J": 2,
+    "K": 2,
+    "L": 3,
+    "M": 5,
+    "N": 3,
+    "O": 4,
+    "P": 5,
+    "Q": 3,
+    "R": 1,
+    "S": 1,
+    "T": 5
+   },
+   "total": 66,
+   "advantage": "编程 Agent 最强：12 生命周期钩子全自动捕获+BM25/向量/图谱 RRF(LongMemEval R@5=95.2%)+51 个 MCP 工具+实时 Viewer",
+   "tag": "AI 编程 Agent 持久记忆(专精编码场景)"
+  },
+  "🧬 JiuwenMemory (华为openJiuwen)": {
+   "scores": {
+    "A": 5,
+    "B": 5,
+    "C": 3,
+    "D": 5,
+    "E": 4,
+    "F": 1,
+    "G": 2,
+    "H": 4,
+    "I": 2,
+    "J": 3,
+    "K": 1,
+    "L": 2,
+    "M": 2,
+    "N": 5,
+    "O": 2,
+    "P": 4,
+    "Q": 2,
+    "R": 3,
+    "S": 2,
+    "T": 4
+   },
+   "total": 61,
+   "advantage": "L0-L3 四层+AutoDreaming 睡时巩固+GraphMemory 关系图谱+MemoryTurbo 异步(LoCoMo +15%、Token -60%)+Swarm 群体记忆",
+   "tag": "自主生长记忆引擎(基因式演化)"
+  },
+  "🏛️ MindMemOS (华为诺亚)": {
+   "scores": {
+    "A": 5,
+    "B": 5,
+    "C": 3,
+    "D": 5,
+    "E": 4,
+    "F": 1,
+    "G": 3,
+    "H": 3,
+    "I": 2,
+    "J": 3,
+    "K": 1,
+    "L": 2,
+    "M": 1,
+    "N": 5,
+    "O": 2,
+    "P": 4,
+    "Q": 2,
+    "R": 5,
+    "S": 5,
+    "T": 5
+   },
+   "total": 66,
+   "advantage": "实体-属性-时间三维图结构+Dreaming 离线巩固+Feedback 反馈闭环+MindEvolve 技能进化(LoCoMo 94.03 SOTA)",
+   "tag": "记忆操作系统(记忆·技能双向演化)"
+  },
+  "💠 EverMemOS (EverMind)": {
+   "scores": {
+    "A": 4,
+    "B": 5,
+    "C": 3,
+    "D": 4,
+    "E": 3,
+    "F": 1,
+    "G": 2,
+    "H": 2,
+    "I": 1,
+    "J": 2,
+    "K": 0,
+    "L": 1,
+    "M": 1,
+    "N": 4,
+    "O": 2,
+    "P": 3,
+    "Q": 2,
+    "R": 2,
+    "S": 2,
+    "T": 4
+   },
+   "total": 48,
+   "advantage": "印痕(Engram)启发：Episodic Trace→Semantic Consolidation→Reconstructive Recollection，LoCoMo/LongMemEval SOTA",
+   "tag": "自组织记忆 OS(情景-语义-重构三层)"
+  },
+  "📁 ReMe (agentscope-ai)": {
+   "scores": {
+    "A": 4,
+    "B": 3,
+    "C": 4,
+    "D": 3,
+    "E": 2,
+    "F": 2,
+    "G": 1,
+    "H": 2,
+    "I": 2,
+    "J": 1,
+    "K": 0,
+    "L": 1,
+    "M": 1,
+    "N": 4,
+    "O": 3,
+    "P": 4,
+    "Q": 3,
+    "R": 2,
+    "S": 0,
+    "T": 4
+   },
+   "total": 46,
+   "advantage": "Memory-as-File：Markdown 文件即记忆+BM25/向量/wikilink RRF 行级召回+ReMe Studio 可视化+跨 Agent 共享(LongMemEval 89.4)",
+   "tag": "本地优先文件化知识库"
+  },
+  "🧩 memU (OpenClaw, 8.8k⭐)": {
+   "scores": {
+    "A": 4,
+    "B": 5,
+    "C": 3,
+    "D": 2,
+    "E": 1,
+    "F": 2,
+    "G": 2,
+    "H": 4,
+    "I": 1,
+    "J": 1,
+    "K": 0,
+    "L": 1,
+    "M": 1,
+    "N": 2,
+    "O": 1,
+    "P": 4,
+    "Q": 2,
+    "R": 1,
+    "S": 0,
+    "T": 4
+   },
+   "total": 41,
+   "advantage": "三层架构(Resource→Memory Item→Category)+原子事实提取+语义聚类，Token 减少 70-90%，LoCoMo 92.09，Proactive 注入",
+   "tag": "24/7 Agent 持续记忆基础设施"
+  },
+  "🏰 MemPalace (22k⭐)": {
+   "scores": {
+    "A": 3,
+    "B": 3,
+    "C": 3,
+    "D": 2,
+    "E": 0,
+    "F": 2,
+    "G": 0,
+    "H": 0,
+    "I": 0,
+    "J": 1,
+    "K": 0,
+    "L": 0,
+    "M": 0,
+    "N": 0,
+    "O": 2,
+    "P": 3,
+    "Q": 2,
+    "R": 0,
+    "S": 0,
+    "T": 1
+   },
+   "total": 22,
+   "advantage": "Verbatim 全量对话存储(不压缩)+时序回放，最大对话回忆保真",
+   "tag": "全量对话记忆(保真优先)"
+  },
+  "🕸️ Cognee (17.8k⭐)": {
+   "scores": {
+    "A": 4,
+    "B": 5,
+    "C": 4,
+    "D": 5,
+    "E": 3,
+    "F": 2,
+    "G": 2,
+    "H": 2,
+    "I": 2,
+    "J": 4,
+    "K": 1,
+    "L": 2,
+    "M": 2,
+    "N": 2,
+    "O": 2,
+    "P": 5,
+    "Q": 1,
+    "R": 2,
+    "S": 2,
+    "T": 3
+   },
+   "total": 55,
+   "advantage": "图原生记忆：ECL 管道四动词 API(remember/recall/forget/improve)+代码图谱+多后端(Neo4j/Postgres)+MCP",
+   "tag": "图记忆平台(编码场景强)"
+  },
+  "🧠 Letta/MemGPT (10k⭐)": {
+   "scores": {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 1,
+    "E": 2,
+    "F": 1,
+    "G": 2,
+    "H": 1,
+    "I": 1,
+    "J": 3,
+    "K": 0,
+    "L": 1,
+    "M": 0,
+    "N": 1,
+    "O": 1,
+    "P": 3,
+    "Q": 1,
+    "R": 1,
+    "S": 0,
+    "T": 3
+   },
+   "total": 34,
+   "advantage": "OS 式分层记忆(core/recall/archival)+agent 运行时自管理上下文",
+   "tag": "有状态 Agent 运行时(框架绑定)"
+  },
+  "🧠 OpenClaw 记忆升级 (memory-upgrade)": {
+   "scores": {
+    "A": 3,
+    "B": 4,
+    "C": 4,
+    "D": 3,
+    "E": 1,
+    "F": 0,
+    "G": 2,
+    "H": 3,
+    "I": 1,
+    "J": 0,
+    "K": 0,
+    "L": 1,
+    "M": 4,
+    "N": 3,
+    "O": 0,
+    "P": 3,
+    "Q": 2,
+    "R": 0,
+    "S": 0,
+    "T": 1
+   },
+   "total": 35,
+   "advantage": "六层升级+memoryFlush 八类分类+QMD 混合搜索+MMR+时间衰减+压缩保护",
+   "tag": "OpenClaw 多层级记忆扩展"
+  }
+ }
+}

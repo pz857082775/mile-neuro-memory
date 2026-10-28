@@ -1,0 +1,421 @@
+{
+ "meta": {
+  "engine_version": "2.0.0",
+  "test_time": "2026-10-28T10:30:05.953204+00:00",
+  "root": "C:\\Users\\admin\\AppData\\Local\\Temp\\nmem-test-hcb71rtx",
+  "python": "C:/Users/admin/.workbuddy/binaries/python/envs/default/Scripts/python.exe"
+ },
+ "dimensions": {
+  "D1_功能完整性": {
+   "cases": [
+    {
+     "name": "add",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "get",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "search",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "update",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "versions",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "restore",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "correct",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "contradictions",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "consolidate",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "forget",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "demote",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "stats",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "profile",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "export",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "import",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "cache",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "sync",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "audit",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "batch",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "serve-http",
+     "pass": true,
+     "detail": "单独验证见 D9/HTTP"
+    }
+   ],
+   "pass": 20,
+   "total": 20
+  },
+  "D2_类脑分层机制": {
+   "cases": [
+    {
+     "name": "短时写入",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "长时语义写入",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "去重合并",
+     "pass": true,
+     "detail": "merged=False"
+    },
+    {
+     "name": "巩固迁移",
+     "pass": true,
+     "detail": "promoted=3"
+    },
+    {
+     "name": "画像提炼",
+     "pass": true,
+     "detail": "entries=8"
+    },
+    {
+     "name": "版本回溯",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 6,
+   "total": 6
+  },
+  "D3_检索质量": {
+   "cases": [
+    {
+     "name": "精确语义命中",
+     "pass": true,
+     "detail": "hit=1"
+    },
+    {
+     "name": "近似关键词",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "宽泛查询兜底",
+     "pass": true,
+     "detail": "broad=True n=3"
+    },
+    {
+     "name": "层级过滤",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "联想图谱扩展",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "排序降序",
+     "pass": true,
+     "detail": "scores=[0.9775, 0.9, 0.51]"
+    },
+    {
+     "name": "情境加权不崩溃",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 7,
+   "total": 7
+  },
+  "D4_矛盾检测": {
+   "cases": [
+    {
+     "name": "数值矛盾自动标记",
+     "pass": true,
+     "detail": "[{\"old_id\": \"m_1793183421721_c2272627\", \"kind\": \"numeric\", \"new_status\": \"pending\", \"reason\": \"50 万 vs 80 万（万）\"}]"
+    },
+    {
+     "name": "时间线矛盾检测",
+     "pass": true,
+     "detail": "[{\"old_id\": \"m_1793183426880_abd3cda2\", \"kind\": \"timeline\", \"new_status\": \"pending\", \"reason\": \"2026年3月 vs 2026年6月\"}]"
+    },
+    {
+     "name": "极性矛盾检测",
+     "pass": true,
+     "detail": "[{\"old_id\": \"m_1793183421176_b2107714\", \"kind\": \"polarity\", \"new_status\": \"pending\", \"reason\": \"情感/断言极性冲突\"}, {\"old_id\": \"m_1793183428170_b0ce1ed6\", \"kind\": \"polarity\", \"new_status\": \"pending\", \"reason\": \"情感/断言极性冲突\"}]"
+    },
+    {
+     "name": "三类矛盾齐备",
+     "pass": true,
+     "detail": "kinds=['numeric', 'polarity', 'timeline']"
+    },
+    {
+     "name": "correct留痕链",
+     "pass": true,
+     "detail": "chain_len=1"
+    }
+   ],
+   "pass": 5,
+   "total": 5
+  },
+  "D5_语义缓存": {
+   "cases": [
+    {
+     "name": "缓存命中",
+     "pass": true,
+     "detail": "hit=True tier=warm"
+    },
+    {
+     "name": "search前置拦截",
+     "pass": true,
+     "detail": "from_cache=True"
+    },
+    {
+     "name": "命中统计",
+     "pass": true,
+     "detail": "hits=3"
+    },
+    {
+     "name": "失效联动",
+     "pass": true,
+     "detail": "removed=2"
+    },
+    {
+     "name": "失效后未命中",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 5,
+   "total": 5
+  },
+  "D6_端侧加密": {
+   "cases": [
+    {
+     "name": "加密写入启用",
+     "pass": true,
+     "detail": "id=m_1793183433748_74c1c107"
+    },
+    {
+     "name": "明文未落盘",
+     "pass": true,
+     "detail": "cipher=ry\": \"enc:v2:uqvdwZHbK/qvsYJizSQuhCkVG5u..."
+    },
+    {
+     "name": "密钥解密读取",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "无密钥不可读",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "无密钥修正被拒",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "开关持久化",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 6,
+   "total": 6
+  },
+  "D7_多租户隔离": {
+   "cases": [
+    {
+     "name": "跨用户检索不可见",
+     "pass": true,
+     "detail": "n=0"
+    },
+    {
+     "name": "用户在库中无 t7 记忆",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "审计日志独立",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 3,
+   "total": 3
+  },
+  "D8_增量同步": {
+   "cases": [
+    {
+     "name": "up dry-run 计划",
+     "pass": true,
+     "detail": "push=1"
+    },
+    {
+     "name": "up 同步执行",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "二次同步零增量",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "down 不推本地独有",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "down 拉取远端差异",
+     "pass": true,
+     "detail": "pull=['m_1793183441809_005ca69d']"
+    }
+   ],
+   "pass": 5,
+   "total": 5
+  },
+  "D9_异常与边界": {
+   "cases": [
+    {
+     "name": "空文本拒绝",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "坏文件不崩溃",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "缺 ID 报错",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "超界版本报错",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "batch 坏 ID 计数",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "name": "update 缺 ID 报错",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "pass": 6,
+   "total": 6
+  }
+ },
+ "perf": {
+  "rebuild_1000_ms": 3.67,
+  "write": {
+   "avg_ms": 15.091,
+   "p50_ms": 14.616,
+   "p95_ms": 19.197,
+   "min_ms": 12.657,
+   "max_ms": 21.208,
+   "n": 30
+  },
+  "search_1000": {
+   "avg_ms": 17.886,
+   "p50_ms": 17.739,
+   "p95_ms": 21.152,
+   "min_ms": 16.197,
+   "max_ms": 21.416,
+   "n": 30
+  },
+  "search_broad": {
+   "avg_ms": 17.076,
+   "p50_ms": 16.692,
+   "p95_ms": 19.602,
+   "min_ms": 16.069,
+   "max_ms": 20.188,
+   "n": 30
+  },
+  "cache_query": {
+   "avg_ms": 0.251,
+   "p50_ms": 0.243,
+   "p95_ms": 0.304,
+   "min_ms": 0.23,
+   "max_ms": 0.305,
+   "n": 30
+  }
+ },
+ "summary": {
+  "dimensions": 9,
+  "total_cases": 63,
+  "passed": 63,
+  "failed": 0,
+  "pass_rate": 100.0
+ }
+}
