@@ -3,12 +3,14 @@
 > 给 AI 助手装一套**类脑记忆系统**：三层记忆编码 + 遗忘曲线 + 混合召回 + 矛盾修正 + 语义缓存。
 > **零第三方依赖**，纯 Python 标准库，离线可用。
 
-![version](https://img.shields.io/badge/version-2.0.0-blue)
+![版本](https://img.shields.io/badge/版本-2.0.0-blue)
 ![python](https://img.shields.io/badge/python-3.8%2B-blue)
-![dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
-![tests](https://img.shields.io/badge/tests-85%2F85%20passed-brightgreen)
-![benchmark](https://img.shields.io/badge/评测-91%2F100%20·%20第1名-orange)
-![license](https://img.shields.io/badge/license-MIT-green)
+![依赖](https://img.shields.io/badge/依赖-0-brightgreen)
+![测试](https://img.shields.io/badge/测试-85%2F85_通过-brightgreen)
+![评测](https://img.shields.io/badge/评测-91%2F100_·_第1名-orange)
+![许可](https://img.shields.io/badge/许可-MIT-green)
+![版权](https://img.shields.io/badge/版权-米乐-blueviolet)
+![授权模式](https://img.shields.io/badge/授权模式-开源免费-green)
 
 ### 📄 [**在线综合评测报告 → pz857082775.github.io/mile-neuro-memory**](https://pz857082775.github.io/mile-neuro-memory/)
 
