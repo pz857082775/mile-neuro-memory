@@ -10,13 +10,17 @@
 ![benchmark](https://img.shields.io/badge/评测-91%2F100%20·%20第1名-orange)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
+### 📄 [**在线综合评测报告 → pz857082775.github.io/mile-neuro-memory**](https://pz857082775.github.io/mile-neuro-memory/)
+
+17 个主流记忆方案 × 20 项能力横向测评，含逐项给分理由、扣分证据与实测数据。也可以直接看源码：[`docs/index.html`](docs/index.html)。
+
 ---
 
 ## 📊 综合评测：91 / 100，17 个记忆方案中排名第 1
 
 本项目附带一份**完整的能力测评报告**，用统一口径（20 项能力 × 5 分 = 100 分）横向对比了 17 个主流记忆方案——包括 Mem0、Cognee、Letta/MemGPT、EverMemOS、MindMemOS（华为诺亚）、JiuwenMemory（华为 openJiuwen）、agentmemory、memU、MemPalace 等开源项目与本机方案。
 
-**📄 在线报告：[`docs/index.html`](docs/index.html)** — 用浏览器打开即为可视化报告（排行榜 / 20 项能力矩阵 / 逐项提升证据 / 实测数据）。
+**📄 在线报告：[pz857082775.github.io/mile-neuro-memory](https://pz857082775.github.io/mile-neuro-memory/)** — 浏览器打开即为可视化报告（排行榜 / 20 项能力矩阵 / 逐项提升证据 / 实测数据）。
 
 ### 总分排行（20 项 × 5 分）
 
@@ -155,7 +159,7 @@ enc:v2:<base64( HMAC-SHA256(32) | salt(16) | nonce(8) | ciphertext )>
 把整个仓库目录放到技能目录下即可，`SKILL.md` 已含完整触发规则与工作流：
 
 ```bash
-git clone https://github.com/<your-name>/mile-neuro-memory.git ~/.workbuddy/skills/mile-neuro-memory
+git clone https://github.com/pz857082775/mile-neuro-memory.git ~/.workbuddy/skills/mile-neuro-memory
 ```
 
 ### 2. 作为 MCP 服务器（Claude Desktop / Cursor / 任意 MCP 客户端）
