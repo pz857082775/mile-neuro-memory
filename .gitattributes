@@ -1,0 +1,8 @@
+# 统一为 LF：技能市场的 SKILL.md 解析器要求首行严格为 "---"，CRLF 会导致 frontmatter 解析失败
+* text=auto eol=lf
+
+*.md      text eol=lf
+*.py      text eol=lf
+*.json    text eol=lf
+*.html    text eol=lf
+*.zip     binary
