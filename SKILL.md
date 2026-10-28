@@ -2,7 +2,7 @@
 name: mile-neuro-memory
 display_name: 米乐-神经网络记忆
 display_name_en: Mile Neuro Memory
-description: 类脑神经网络记忆技能（NeuroMem v2.0）。当 AI 助手需要记住用户信息、跨会话复用上下文、检索历史对话、修正错误记忆、去重/巩固长期记忆、降低大模型 Token 成本时使用。典型触发场景：用户提供了个人信息/偏好/项目事实/工作流程需要长期记住；用户问"我之前说过……""你还记得吗"；需要把历史对话自动提炼成结构化记忆；对话中出现前后矛盾的信息需要检测修正；大量重复性问答需要语义缓存拦截。使用本技能运行 scripts/neuromem.py 引擎（零第三方依赖，Python 标准库实现），实现三层记忆、向量语义+BM25 混合召回、自动捕获、矛盾检测与版本化修正、反馈闭环自我进化、实体关系图谱、三级语义缓存、增量同步、AEAD 认证加密、全链路审计，并内置 MCP 服务器与 Web 可视化面板。
+description: 类脑神经网络记忆技能（NeuroMem v2.0）。当 AI 助手需要记住用户信息、跨会话复用上下文、检索历史对话、修正错误记忆、去重/巩固长期记忆、降低大模型 Token 成本时使用。典型触发场景：用户提供了个人信息/偏好/项目事实/工作流程需要长期记住；用户问「我之前说过……」「你还记得吗」；需要把历史对话自动提炼成结构化记忆；对话中出现前后矛盾的信息需要检测修正；大量重复性问答需要语义缓存拦截。使用本技能运行 scripts/neuromem.py 引擎（零第三方依赖，Python 标准库实现），实现三层记忆、向量语义+BM25 混合召回、自动捕获、矛盾检测与版本化修正、反馈闭环自我进化、实体关系图谱、三级语义缓存、增量同步、AEAD 认证加密、全链路审计，并内置 MCP 服务器与 Web 可视化面板。
 description_zh: 模拟人脑「工作记忆→短时→长时永久」三层编码与遗忘曲线，提供向量语义+BM25 混合检索、自动捕获对话事实、矛盾自动检测与版本化修正、反馈闭环自我进化、实体关系图谱、三级语义缓存降本、增量跨端同步、AEAD 认证加密与全链路审计。零第三方依赖，纯 Python 标准库实现，离线可跑，25 个子命令，内置 MCP 服务器与可视化面板。
 description_en: Brain-inspired memory system with working/short-term/long-term tiers, hybrid vector-semantic + BM25 retrieval, automatic conversation fact capture, contradiction detection with versioned correction, feedback-loop self-evolution, entity-relation graph, three-tier semantic cache for token savings, incremental sync, authenticated AEAD encryption and full audit trail. Zero third-party dependencies, pure Python stdlib, works fully offline, 25 subcommands, built-in MCP server and web dashboard.
 category: 记忆与知识管理
